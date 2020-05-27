@@ -1,0 +1,1832 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions targetNamespace="urn:JadeWebServices/TWHWebServiceExt/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:JadeWebServices/TWHWebServiceExt/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:JadeWebServices/TWHWebServiceExt/">
+      <xsd:element name="createVendorRefillOrder">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="tns:VendorRefillOrderReq" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createVendorRefillOrderResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="createVendorRefillOrderResult" type="tns:VendorRefillOrderRsp" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="doReceiveOrder">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="tns:ReceiveOrderReq" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="doReceiveOrderResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="doReceiveOrderResult" type="tns:ReceiveOrderRsp" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getOrder4Receiving">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="tns:Order4ReceivingReq" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getOrder4ReceivingResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getOrder4ReceivingResult" type="tns:Order4ReceivingRsp" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getProductDetails">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="productReq" type="tns:GetProductDetailsReq" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getProductDetailsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getProductDetailsResult" type="tns:GetProductDetailsRsp" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateProductDetails">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="updateProductDetailsReq" type="tns:UpdateProductDetailsReq" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateProductDetailsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="updateProductDetailsResult" type="tns:UpdateProductDetailsRsp" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="authoriseUser">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="userCredentials" type="tns:AuthoriseUserReq" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="authoriseUserResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="authoriseUserResult" type="tns:AuthoriseUserRsp" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="doStockAdjustment">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="tns:StockAdjustmentReq" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="doStockAdjustmentResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="doStockAdjustmentResult" type="tns:StockAdjustmentRsp" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="doStockReturnXfer">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="tns:StockReturnXferReq" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="doStockReturnXferResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="doStockReturnXferResult" type="tns:StockReturnXferRsp" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="doUnloadPallet">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="tns:UnloadPalletReq" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="doUnloadPalletResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="doUnloadPalletResult" type="tns:UnloadPalletRsp" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getRTSInformation">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="tns:StockInfoSingleBranchReq" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getRTSInformationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getRTSInformationResult" type="tns:StockRTSInfoRsp" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getReturnsInformation">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="tns:StockInfoSingleBranchReq" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getReturnsInformationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getReturnsInformationResult" type="tns:StockReturnsInfoRsp" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getScanUnloadNumber">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="tns:ScanUnloadNumberReq" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getScanUnloadNumberResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getScanUnloadNumberResult" type="tns:ScanUnloadNumberRsp" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getStockOrderInformation">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="tns:StockInfoSingleBranchReq" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getStockOrderInformationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getStockOrderInformationResult" type="tns:StockOrderInfoRsp" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getStockInformation">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="tns:StockInfoMultiBranchReq" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getStockInformationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getStockInformationResult" type="tns:StockInfoMultiBranchRsp" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getSupplierDetails">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="supplierReq" type="tns:SupplierDetailsReq" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getSupplierDetailsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getSupplierDetailsResult" type="tns:SupplierDetailsRsp" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="processRFC">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="supplierRFCReq" type="tns:SupplierRFCReq" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="processRFCResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="processRFCResult" type="tns:SupplierRFCRsp" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="processBulkSOHRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="branch" type="xsd:int"></xsd:element>
+            <xsd:element name="classCode" type="xsd:string"></xsd:element>
+            <xsd:element name="returnData" type="xsd:int"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="processBulkSOHRequestResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="processBulkSOHRequestResult" type="tns:BulkSOHResponse" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="processSetStockAdjustments">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="bar" type="tns:BulkAdjustRequest" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="processSetStockAdjustmentsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="processSetStockAdjustmentsResult" type="tns:BulkAdjustResponse" nillable="true"></xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="VendorRefillOrderReq">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIAuthorisedWebServiceRequest">
+            <xsd:sequence>
+              <xsd:element name="action" type="xsd:string"></xsd:element>
+              <xsd:element name="branchCode" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="estDeliveryDate" type="xsd:date" minOccurs="0"></xsd:element>
+              <xsd:element name="estDeliveryTime" type="xsd:time" minOccurs="0"></xsd:element>
+              <xsd:element name="lines" type="tns:ArrayOfVendorRefillLineReqItem" nillable="true"></xsd:element>
+              <xsd:element name="orderNumber" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="supplierCode" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfVendorRefillLineReqItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="VendorRefillLineReqItem" type="tns:VendorRefillLineReqItem"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfObject">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="Object" type="xs:anyType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfAnyType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="Any" type="xsd:anyType"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="VendorRefillLineReqItem">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIWebServiceRequestItem">
+            <xsd:sequence>
+              <xsd:element name="barcode" type="xsd:string"></xsd:element>
+              <xsd:element name="orderQuantity" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="weightOrdered" type="tns:decimal_9_3" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="TUIWebServiceRequestItem">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TUIAuthorisedWebServiceRequest">
+        <xsd:sequence>
+          <xsd:element name="organisation" type="xsd:string"></xsd:element>
+          <xsd:element name="password" type="xsd:string"></xsd:element>
+          <xsd:element name="username" type="xsd:string"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="VendorRefillOrderRsp">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIWebServiceResponse">
+            <xsd:sequence>
+              <xsd:element name="branchCode" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="orderMessage" type="xsd:string"></xsd:element>
+              <xsd:element name="orderNumber" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="totalLines" type="xsd:int" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="TUIWebServiceResponse">
+        <xsd:sequence>
+          <xsd:element name="errorMessage" type="xsd:string"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ReceiveOrderReq">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIAuthorisedWebServiceRequest">
+            <xsd:sequence>
+              <xsd:element name="branchCode" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="lines" type="tns:ArrayOfReceiveOrderReqItem" nillable="true"></xsd:element>
+              <xsd:element name="orderNumber" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="shipmentNumber" type="xsd:int" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfReceiveOrderReqItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="ReceiveOrderReqItem" type="tns:ReceiveOrderReqItem"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ReceiveOrderReqItem">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIWebServiceRequestItem">
+            <xsd:sequence>
+              <xsd:element name="barcode" type="xsd:string"></xsd:element>
+              <xsd:element name="cartonCount" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="unitCount" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="weightCount" type="tns:decimal_9_3" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ReceiveOrderRsp">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIWebServiceResponse">
+            <xsd:sequence>
+              <xsd:element name="branchCode" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="orderMessage" type="xsd:string"></xsd:element>
+              <xsd:element name="orderNumber" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="totalCartonCount" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="totalUnitCount" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="totalWeightCount" type="tns:decimal_9_3" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Order4ReceivingReq">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIAuthorisedWebServiceRequest">
+            <xsd:sequence>
+              <xsd:element name="branchCode" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="orderNumber" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="shipmentNumber" type="xsd:int" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Order4ReceivingRsp">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIWebServiceResponse">
+            <xsd:sequence>
+              <xsd:element name="branchCode" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="orderLines" type="tns:ArrayOfOrder4ReceivingRspItem" nillable="true"></xsd:element>
+              <xsd:element name="orderNumber" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="shipmentNumber" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="supplierCode" type="xsd:string"></xsd:element>
+              <xsd:element name="supplierName" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfOrder4ReceivingRspItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="Order4ReceivingRspItem" type="tns:Order4ReceivingRspItem"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Order4ReceivingRspItem">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIWebServiceResponseItem">
+            <xsd:sequence>
+              <xsd:element name="barcode" type="xsd:string"></xsd:element>
+              <xsd:element name="numberOfCartons" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="numberOfProducts" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="retailPrice" type="tns:decimal_9_3" minOccurs="0"></xsd:element>
+              <xsd:element name="weightOrdered" type="tns:decimal_9_3" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="TUIWebServiceResponseItem">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="GetProductDetailsReq">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIAuthorisedWebServiceRequest">
+            <xsd:sequence>
+              <xsd:element name="barcode" type="tns:decimal_13_0" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="GetProductDetailsRsp">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIWebServiceResponse">
+            <xsd:sequence>
+              <xsd:element name="product" type="tns:ProductKeyItem" nillable="true"></xsd:element>
+              <xsd:element name="productDetails" type="tns:ProductDetailsItem" nillable="true"></xsd:element>
+              <xsd:element name="recordLastUpdated" type="tns:ProductLastUpdatedItem" nillable="true"></xsd:element>
+              <xsd:element name="supplier" type="tns:ProductSupplierItem" nillable="true"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductKeyItem">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsResponse">
+            <xsd:sequence>
+              <xsd:element name="barcode" type="tns:decimal_13_0" minOccurs="0"></xsd:element>
+              <xsd:element name="barcodeStatus" type="xsd:string"></xsd:element>
+              <xsd:element name="barcodeType" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductDetailsResponse" abstract="true">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIWebServiceResponseItem">
+            <xsd:sequence></xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductDetailsItem">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsResponse">
+            <xsd:sequence>
+              <xsd:element name="allVariants" type="tns:ArrayOfProductVariantItem" nillable="true"></xsd:element>
+              <xsd:element name="bestBeforeDate" type="xsd:string"></xsd:element>
+              <xsd:element name="buypackComponent" type="xsd:string"></xsd:element>
+              <xsd:element name="description" type="xsd:string"></xsd:element>
+              <xsd:element name="dimensions" type="tns:ProductDimensionsItem" nillable="true"></xsd:element>
+              <xsd:element name="financial" type="tns:ProductFinancialItem" nillable="true"></xsd:element>
+              <xsd:element name="fullDescriptions" type="tns:ProductFullDescsItem" nillable="true"></xsd:element>
+              <xsd:element name="hierarchy" type="tns:ProductHierarchyItem" nillable="true"></xsd:element>
+              <xsd:element name="highRisk" type="xsd:string"></xsd:element>
+              <xsd:element name="imageAvailable" type="xsd:string"></xsd:element>
+              <xsd:element name="inStoreEndDate" type="xsd:date" minOccurs="0"></xsd:element>
+              <xsd:element name="inStoreStartDate" type="xsd:date" minOccurs="0"></xsd:element>
+              <xsd:element name="lastReceiptDate" type="xsd:date" minOccurs="0"></xsd:element>
+              <xsd:element name="localOverseas" type="xsd:string"></xsd:element>
+              <xsd:element name="methodId" type="xsd:string"></xsd:element>
+              <xsd:element name="newRelease" type="tns:ProductNewReleaseItem" nillable="true"></xsd:element>
+              <xsd:element name="ordering" type="tns:ProductOrderingItem" nillable="true"></xsd:element>
+              <xsd:element name="outerCtnConveyable" type="xsd:string"></xsd:element>
+              <xsd:element name="packaging" type="tns:ProductPackagingItem" nillable="true"></xsd:element>
+              <xsd:element name="productAttributes" type="tns:ProductAttributeItem" nillable="true"></xsd:element>
+              <xsd:element name="rangeClass" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="reducedToSell" type="xsd:string"></xsd:element>
+              <xsd:element name="shelfDisplayMethod" type="xsd:string"></xsd:element>
+              <xsd:element name="shelfLifeDays" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="terms" type="xsd:string"></xsd:element>
+              <xsd:element name="web" type="tns:ProductWebItem" nillable="true"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfProductVariantItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="ProductVariantItem" type="tns:ProductVariantItem"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ProductVariantItem">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsResponse">
+            <xsd:sequence>
+              <xsd:element name="barcode" type="tns:decimal_13_0" minOccurs="0"></xsd:element>
+              <xsd:element name="description" type="xsd:string"></xsd:element>
+              <xsd:element name="type" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductDimensionsItem">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsResponse">
+            <xsd:sequence>
+              <xsd:element name="loadedPalletHeight" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="nominalWeight" type="tns:decimal_6_3" minOccurs="0"></xsd:element>
+              <xsd:element name="outerDepth" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="outerDimensionUnits" type="xsd:string"></xsd:element>
+              <xsd:element name="outerHeight" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="outerVolume" type="tns:decimal_13_7" minOccurs="0"></xsd:element>
+              <xsd:element name="outerWeight" type="tns:decimal_8_2" minOccurs="0"></xsd:element>
+              <xsd:element name="outerWidth" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="unitOfMeasure" type="xsd:string"></xsd:element>
+              <xsd:element name="variableWeight" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductFinancialItem">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsResponse">
+            <xsd:sequence>
+              <xsd:element name="auGST" type="tns:decimal_4_2" minOccurs="0"></xsd:element>
+              <xsd:element name="costPrice" type="tns:decimal_9_3" minOccurs="0"></xsd:element>
+              <xsd:element name="cstlanded" type="tns:decimal_9_3" minOccurs="0"></xsd:element>
+              <xsd:element name="currency" type="xsd:string"></xsd:element>
+              <xsd:element name="nzGST" type="tns:decimal_4_2" minOccurs="0"></xsd:element>
+              <xsd:element name="retailPrice" type="tns:decimal_7_2" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductFullDescsItem">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsResponse">
+            <xsd:sequence>
+              <xsd:element name="authorTitle" type="xsd:string"></xsd:element>
+              <xsd:element name="bookTitle" type="xsd:string"></xsd:element>
+              <xsd:element name="long" type="xsd:string"></xsd:element>
+              <xsd:element name="mediaPackSize" type="xsd:string"></xsd:element>
+              <xsd:element name="ticketing" type="xsd:string"></xsd:element>
+              <xsd:element name="unspecified" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductHierarchyItem">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsResponse">
+            <xsd:sequence>
+              <xsd:element name="buyer" type="xsd:string"></xsd:element>
+              <xsd:element name="className" type="xsd:string"></xsd:element>
+              <xsd:element name="department" type="xsd:string"></xsd:element>
+              <xsd:element name="itemCode" type="tns:decimal_12_0" minOccurs="0"></xsd:element>
+              <xsd:element name="subClass" type="xsd:string"></xsd:element>
+              <xsd:element name="subClassNumber" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="subDepartment" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductNewReleaseItem">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsResponse">
+            <xsd:sequence>
+              <xsd:element name="enabled" type="xsd:string"></xsd:element>
+              <xsd:element name="expiryDate" type="xsd:date" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductOrderingItem">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsResponse">
+            <xsd:sequence>
+              <xsd:element name="autoReorderAvailDate" type="xsd:date" minOccurs="0"></xsd:element>
+              <xsd:element name="autoReorderMethod" type="xsd:string"></xsd:element>
+              <xsd:element name="autoReorderMultiple" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="branchOrderMultiple" type="xsd:string"></xsd:element>
+              <xsd:element name="orderSystem" type="xsd:string"></xsd:element>
+              <xsd:element name="orderUnitMin" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="reorderType" type="xsd:string"></xsd:element>
+              <xsd:element name="replenish" type="xsd:string"></xsd:element>
+              <xsd:element name="replenishMultiple" type="xsd:string"></xsd:element>
+              <xsd:element name="ullagePcnt" type="tns:decimal_5_2" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductPackagingItem">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsResponse">
+            <xsd:sequence>
+              <xsd:element name="innersPerOuter" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="layersPerPallet" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="outersPerLayer" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="outersPerPallet" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="perCarton" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="unitsPerInner" type="xsd:int" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductAttributeItem">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsResponse">
+            <xsd:sequence>
+              <xsd:element name="allAttributeGroups" type="tns:ArrayOfProductAttributeGroupItem" nillable="true"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfProductAttributeGroupItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="ProductAttributeGroupItem" type="tns:ProductAttributeGroupItem"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ProductAttributeGroupItem">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsResponse">
+            <xsd:sequence>
+              <xsd:element name="allAttributeDetails" type="tns:ArrayOfProductAttributeDetailItem" nillable="true"></xsd:element>
+              <xsd:element name="name" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfProductAttributeDetailItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="ProductAttributeDetailItem" type="tns:ProductAttributeDetailItem"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ProductAttributeDetailItem">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsResponse">
+            <xsd:sequence>
+              <xsd:element name="code" type="xsd:string"></xsd:element>
+              <xsd:element name="description" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductWebItem">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsResponse">
+            <xsd:sequence>
+              <xsd:element name="effectiveDate" type="xsd:date" minOccurs="0"></xsd:element>
+              <xsd:element name="enabled" type="xsd:string"></xsd:element>
+              <xsd:element name="expiryDate" type="xsd:date" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductLastUpdatedItem">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsResponse">
+            <xsd:sequence>
+              <xsd:element name="date" type="xsd:date" minOccurs="0"></xsd:element>
+              <xsd:element name="time" type="xsd:time" minOccurs="0"></xsd:element>
+              <xsd:element name="user" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductSupplierItem">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsResponse">
+            <xsd:sequence>
+              <xsd:element name="description" type="xsd:string"></xsd:element>
+              <xsd:element name="primarySupplier" type="xsd:string"></xsd:element>
+              <xsd:element name="supplierCode" type="xsd:string"></xsd:element>
+              <xsd:element name="supplierProductStatus" type="xsd:string"></xsd:element>
+              <xsd:element name="supplierReference" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="UpdateProductDetailsReq">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIAuthorisedWebServiceRequest">
+            <xsd:sequence>
+              <xsd:element name="barcode" type="tns:decimal_13_0" minOccurs="0"></xsd:element>
+              <xsd:element name="productDetails" type="tns:ProductDetailsInput" nillable="true"></xsd:element>
+              <xsd:element name="supplier" type="tns:ProductSupplierInput" nillable="true"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductDetailsInput">
+        <xsd:annotation>
+          <xsd:documentation>Note that this is the driving class for the validation and updating for the Update Product Details web service</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsRequest">
+            <xsd:sequence>
+              <xsd:element name="bestBeforeDate" type="xsd:string"></xsd:element>
+              <xsd:element name="buypackComponent" type="xsd:string"></xsd:element>
+              <xsd:element name="description" type="xsd:string"></xsd:element>
+              <xsd:element name="dimensions" type="tns:ProductDimensionsInput" nillable="true"></xsd:element>
+              <xsd:element name="financial" type="tns:ProductFinancialInput" nillable="true"></xsd:element>
+              <xsd:element name="fullDescriptions" type="tns:ProductFullDescsInput" nillable="true"></xsd:element>
+              <xsd:element name="highRisk" type="xsd:string"></xsd:element>
+              <xsd:element name="imageAvailable" type="xsd:string"></xsd:element>
+              <xsd:element name="inStoreEndDate" type="xsd:date" minOccurs="0"></xsd:element>
+              <xsd:element name="inStoreStartDate" type="xsd:date" minOccurs="0"></xsd:element>
+              <xsd:element name="lastReceiptDate" type="xsd:date" minOccurs="0"></xsd:element>
+              <xsd:element name="localOverseas" type="xsd:string"></xsd:element>
+              <xsd:element name="methodId" type="xsd:string"></xsd:element>
+              <xsd:element name="newRelease" type="tns:ProductNewReleaseInput" nillable="true"></xsd:element>
+              <xsd:element name="ordering" type="tns:ProductOrderingInput" nillable="true"></xsd:element>
+              <xsd:element name="outerCtnConveyable" type="xsd:string"></xsd:element>
+              <xsd:element name="packaging" type="tns:ProductPackagingInput" nillable="true"></xsd:element>
+              <xsd:element name="rangeClass" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="reducedToSell" type="xsd:string"></xsd:element>
+              <xsd:element name="shelfDisplayMethod" type="xsd:string"></xsd:element>
+              <xsd:element name="shelfLifeDays" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="terms" type="xsd:string"></xsd:element>
+              <xsd:element name="web" type="tns:ProductWebInput" nillable="true"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductDimensionsInput">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsRequest">
+            <xsd:sequence>
+              <xsd:element name="loadedPalletHeight" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="nominalWeight" type="tns:decimal_6_3" minOccurs="0"></xsd:element>
+              <xsd:element name="outerDepth" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="outerDimensionUnits" type="xsd:string"></xsd:element>
+              <xsd:element name="outerHeight" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="outerWeight" type="tns:decimal_8_2" minOccurs="0"></xsd:element>
+              <xsd:element name="outerWidth" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="unitOfMeasure" type="xsd:string"></xsd:element>
+              <xsd:element name="variableWeight" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductDetailsRequest" abstract="true">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIWebServiceRequestItem">
+            <xsd:sequence></xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductFinancialInput">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsRequest">
+            <xsd:sequence>
+              <xsd:element name="auGST" type="tns:decimal_4_2" minOccurs="0"></xsd:element>
+              <xsd:element name="costPrice" type="tns:decimal_9_3" minOccurs="0"></xsd:element>
+              <xsd:element name="currency" type="xsd:string"></xsd:element>
+              <xsd:element name="nzGST" type="tns:decimal_4_2" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductFullDescsInput">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsRequest">
+            <xsd:sequence>
+              <xsd:element name="authorTitle" type="xsd:string"></xsd:element>
+              <xsd:element name="bookTitle" type="xsd:string"></xsd:element>
+              <xsd:element name="long" type="xsd:string"></xsd:element>
+              <xsd:element name="mediaPackSize" type="xsd:string"></xsd:element>
+              <xsd:element name="ticketing" type="xsd:string"></xsd:element>
+              <xsd:element name="unspecified" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductNewReleaseInput">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsRequest">
+            <xsd:sequence>
+              <xsd:element name="enabled" type="xsd:string"></xsd:element>
+              <xsd:element name="expiryDate" type="xsd:date" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductOrderingInput">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsRequest">
+            <xsd:sequence>
+              <xsd:element name="autoReorderAvailDate" type="xsd:date" minOccurs="0"></xsd:element>
+              <xsd:element name="autoReorderMethod" type="xsd:string"></xsd:element>
+              <xsd:element name="autoReorderMultiple" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="branchOrderMultiple" type="xsd:string"></xsd:element>
+              <xsd:element name="orderSystem" type="xsd:string"></xsd:element>
+              <xsd:element name="orderUnitMin" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="reorderType" type="xsd:string"></xsd:element>
+              <xsd:element name="replenish" type="xsd:string"></xsd:element>
+              <xsd:element name="replenishMultiple" type="xsd:string"></xsd:element>
+              <xsd:element name="ullagePcnt" type="tns:decimal_5_2" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductPackagingInput">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsRequest">
+            <xsd:sequence>
+              <xsd:element name="innersPerOuter" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="layersPerPallet" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="outersPerLayer" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="outersPerPallet" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="perCarton" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="unitsPerInner" type="xsd:int" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductWebInput">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsRequest">
+            <xsd:sequence>
+              <xsd:element name="effectiveDate" type="xsd:date" minOccurs="0"></xsd:element>
+              <xsd:element name="enabled" type="xsd:string"></xsd:element>
+              <xsd:element name="expiryDate" type="xsd:date" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ProductSupplierInput">
+        <xsd:complexContent>
+          <xsd:extension base="tns:ProductDetailsRequest">
+            <xsd:sequence>
+              <xsd:element name="primarySupplier" type="xsd:string"></xsd:element>
+              <xsd:element name="supplierCode" type="xsd:string"></xsd:element>
+              <xsd:element name="supplierProductStatus" type="xsd:string"></xsd:element>
+              <xsd:element name="supplierReference" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="UpdateProductDetailsRsp">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIWebServiceResponse">
+            <xsd:sequence>
+              <xsd:element name="barcode" type="tns:decimal_13_0" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="AuthoriseUserReq">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIAuthorisedWebServiceRequest">
+            <xsd:sequence>
+              <xsd:element name="option" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="AuthoriseUserRsp">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIWebServiceResponse">
+            <xsd:sequence>
+              <xsd:element name="access" type="xsd:string"></xsd:element>
+              <xsd:element name="description" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StockAdjustmentReq">
+        <xsd:complexContent>
+          <xsd:extension base="tns:StockInfoSingleBranchReq">
+            <xsd:sequence>
+              <xsd:element name="quantityAdjust" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="reason" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="weightAdjust" type="tns:decimal_9_3" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StockInfoSingleBranchReq">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIAuthorisedWebServiceRequest">
+            <xsd:sequence>
+              <xsd:element name="barcode" type="xsd:string"></xsd:element>
+              <xsd:element name="branchCode" type="xsd:int" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StockAdjustmentRsp">
+        <xsd:complexContent>
+          <xsd:extension base="tns:StockInformationResponse">
+            <xsd:sequence>
+              <xsd:element name="accepted" type="xsd:boolean" minOccurs="0"></xsd:element>
+              <xsd:element name="resultDescription" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StockInformationResponse">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIWebServiceResponse">
+            <xsd:sequence>
+              <xsd:element name="barcode" type="xsd:string"></xsd:element>
+              <xsd:element name="branchCode" type="xsd:int" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StockReturnXferReq">
+        <xsd:complexContent>
+          <xsd:extension base="tns:StockInfoSingleBranchReq">
+            <xsd:sequence>
+              <xsd:element name="transferNumber" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="transferQuantity" type="xsd:int" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StockReturnXferRsp">
+        <xsd:complexContent>
+          <xsd:extension base="tns:StockInformationResponse">
+            <xsd:sequence>
+              <xsd:element name="resultDescription" type="xsd:string"></xsd:element>
+              <xsd:element name="transferNumber" type="xsd:int" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="UnloadPalletReq">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIAuthorisedWebServiceRequest">
+            <xsd:sequence>
+              <xsd:element name="branchCode" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="closeLoad" type="xsd:boolean" minOccurs="0"></xsd:element>
+              <xsd:element name="palletID" type="xsd:string"></xsd:element>
+              <xsd:element name="unloadNumber" type="xsd:int" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="UnloadPalletRsp">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIWebServiceResponse">
+            <xsd:sequence>
+              <xsd:element name="branchCode" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="consignmentNumber" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="palletsDespatched" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="palletsScanned" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="totalUnloaded" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="unloadNumber" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="warningMessage" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StockRTSInfoRsp">
+        <xsd:complexContent>
+          <xsd:extension base="tns:StockInformationResponse">
+            <xsd:sequence>
+              <xsd:element name="c2Discount" type="tns:decimal_5_2" minOccurs="0"></xsd:element>
+              <xsd:element name="c3Discount" type="tns:decimal_5_2" minOccurs="0"></xsd:element>
+              <xsd:element name="c4Discount" type="tns:decimal_5_2" minOccurs="0"></xsd:element>
+              <xsd:element name="rtsIndicator" type="xsd:boolean" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StockReturnsInfoRsp">
+        <xsd:complexContent>
+          <xsd:extension base="tns:StockInformationResponse">
+            <xsd:sequence>
+              <xsd:element name="attributeDescription" type="xsd:string"></xsd:element>
+              <xsd:element name="cost" type="tns:decimal_9_3" minOccurs="0"></xsd:element>
+              <xsd:element name="repair" type="xsd:boolean" minOccurs="0"></xsd:element>
+              <xsd:element name="supplierCode" type="xsd:string"></xsd:element>
+              <xsd:element name="supplierName" type="xsd:string"></xsd:element>
+              <xsd:element name="supplierRef" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ScanUnloadNumberReq">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIAuthorisedWebServiceRequest">
+            <xsd:sequence>
+              <xsd:element name="branchCode" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="unloadNumber" type="xsd:int" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ScanUnloadNumberRsp">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIWebServiceResponse">
+            <xsd:sequence>
+              <xsd:element name="branchCode" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="totalUnloaded" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="unloadNumber" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="unloadStatus" type="xsd:string"></xsd:element>
+              <xsd:element name="warningMessage" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StockOrderInfoRsp">
+        <xsd:complexContent>
+          <xsd:extension base="tns:StockInformationResponse">
+            <xsd:sequence>
+              <xsd:element name="maximum" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="minimum" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="packSize" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="rateOfSale" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="stockOnOrder" type="xsd:int" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StockInfoMultiBranchReq">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIAuthorisedWebServiceRequest">
+            <xsd:sequence>
+              <xsd:element name="barcode" type="xsd:string"></xsd:element>
+              <xsd:element name="branches" type="tns:ArrayOfStockInfoBranchReqItem" nillable="true"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfStockInfoBranchReqItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="StockInfoBranchReqItem" type="tns:StockInfoBranchReqItem"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StockInfoBranchReqItem">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIWebServiceRequestItem">
+            <xsd:sequence>
+              <xsd:element name="branchCode" type="xsd:int" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StockInfoMultiBranchRsp">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIWebServiceResponse">
+            <xsd:sequence>
+              <xsd:element name="barcode" type="xsd:string"></xsd:element>
+              <xsd:element name="branches" type="tns:ArrayOfStockInfoBranchRspItem" nillable="true"></xsd:element>
+              <xsd:element name="c2Discount" type="tns:decimal_5_2" minOccurs="0"></xsd:element>
+              <xsd:element name="category" type="xsd:string"></xsd:element>
+              <xsd:element name="coreDescription" type="xsd:string"></xsd:element>
+              <xsd:element name="cost" type="tns:decimal_9_3" minOccurs="0"></xsd:element>
+              <xsd:element name="department" type="xsd:string"></xsd:element>
+              <xsd:element name="markDown" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="nationalPrice" type="tns:decimal_7_2" minOccurs="0"></xsd:element>
+              <xsd:element name="planogrammedID" type="xsd:string"></xsd:element>
+              <xsd:element name="quantityAtDC" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="status" type="xsd:string"></xsd:element>
+              <xsd:element name="supplierCode" type="xsd:string"></xsd:element>
+              <xsd:element name="supplierRef" type="xsd:string"></xsd:element>
+              <xsd:element name="valueStream" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfStockInfoBranchRspItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="StockInfoBranchRspItem" type="tns:StockInfoBranchRspItem"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StockInfoBranchRspItem">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIWebServiceResponseItem">
+            <xsd:sequence>
+              <xsd:element name="branchCode" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="goodsInTransit" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="lastReceipt" type="xsd:date" minOccurs="0"></xsd:element>
+              <xsd:element name="lastSale" type="xsd:date" minOccurs="0"></xsd:element>
+              <xsd:element name="lastWeekGP" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="lastWeekSales" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="minimumQuantity" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="quantityOnOrder" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="stockOnHand" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="thisWeekGP" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="thisWeekSales" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="week2GP" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="week2Sales" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="week3GP" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="week3Sales" type="xsd:int" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="SupplierDetailsReq">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIAuthorisedWebServiceRequest">
+            <xsd:sequence>
+              <xsd:element name="supplierCode" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="SupplierDetailsRsp">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIWebServiceResponse">
+            <xsd:sequence>
+              <xsd:element name="supplierCode" type="xsd:string"></xsd:element>
+              <xsd:element name="supplierName" type="xsd:string"></xsd:element>
+              <xsd:element name="supplierShortName" type="xsd:string"></xsd:element>
+              <xsd:element name="supplierStatus" type="xsd:string"></xsd:element>
+              <xsd:element name="supplierType" type="xsd:string"></xsd:element>
+              <xsd:element name="vendorRefReq" type="xsd:boolean" minOccurs="0">
+                <xsd:annotation>
+                  <xsd:documentation>Added for SUP533 Magazine Payments Reconciliation</xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element name="vendorRefill" type="xsd:boolean" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="SupplierRFCReq">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIAuthorisedWebServiceRequest">
+            <xsd:sequence>
+              <xsd:element name="allCreditLines" type="tns:ArrayOfSupplierRFCLineItem" nillable="true"></xsd:element>
+              <xsd:element name="authorisedBy" type="xsd:string"></xsd:element>
+              <xsd:element name="authorisedDate" type="xsd:date" minOccurs="0"></xsd:element>
+              <xsd:element name="authorisedTime" type="xsd:time" minOccurs="0"></xsd:element>
+              <xsd:element name="branchCode" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="supplierCode" type="xsd:string"></xsd:element>
+              <xsd:element name="vendorRef" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfSupplierRFCLineItem">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="SupplierRFCLineItem" type="tns:SupplierRFCLineItem"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SupplierRFCLineItem">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIWebServiceRequestItem">
+            <xsd:sequence>
+              <xsd:element name="barcode" type="tns:decimal_13_0" minOccurs="0"></xsd:element>
+              <xsd:element name="purchaseOrder" type="xsd:int" minOccurs="0"></xsd:element>
+              <xsd:element name="quantity" type="xsd:int" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="SupplierRFCRsp">
+        <xsd:complexContent>
+          <xsd:extension base="tns:TUIWebServiceResponse">
+            <xsd:sequence>
+              <xsd:element name="rfcNumber" type="xsd:string"></xsd:element>
+              <xsd:element name="supplierCode" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="BulkSOHResponse">
+        <xsd:sequence>
+          <xsd:element name="branch" type="xsd:int" minOccurs="0"></xsd:element>
+          <xsd:element name="classCode" type="xsd:string"></xsd:element>
+          <xsd:element name="products" type="tns:ArrayOfProduct" nillable="true"></xsd:element>
+          <xsd:element name="status" type="xsd:string"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfProduct">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="Product" type="tns:Product"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Product">
+        <xsd:sequence>
+          <xsd:element name="code" type="xsd:string"></xsd:element>
+          <xsd:element name="soh" type="xsd:int" minOccurs="0"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="BulkAdjustRequest">
+        <xsd:sequence>
+          <xsd:element name="adjusts" type="tns:ArrayOfAdjust" nillable="true"></xsd:element>
+          <xsd:element name="branch" type="xsd:int" minOccurs="0"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfAdjust">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="Adjust" type="tns:Adjust"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Adjust">
+        <xsd:sequence>
+          <xsd:element name="code" type="xsd:string"></xsd:element>
+          <xsd:element name="po_number" type="xsd:int" minOccurs="0"></xsd:element>
+          <xsd:element name="quantity" type="xsd:int" minOccurs="0"></xsd:element>
+          <xsd:element name="reason_code" type="xsd:int" minOccurs="0"></xsd:element>
+          <xsd:element name="vendor_ref" type="xsd:string"></xsd:element>
+          <xsd:element name="weight" type="tns:decimal_9_3" minOccurs="0"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="BulkAdjustResponse">
+        <xsd:sequence>
+          <xsd:element name="errors" type="tns:ArrayOfAdjustError" nillable="true"></xsd:element>
+          <xsd:element name="status" type="xsd:string"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfAdjustError">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="AdjustError" type="tns:AdjustError"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AdjustError">
+        <xsd:sequence>
+          <xsd:element name="code" type="xsd:string"></xsd:element>
+          <xsd:element name="message" type="xsd:string"></xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="decimal_9_3">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="9"></xsd:totalDigits>
+          <xsd:fractionDigits value="3"></xsd:fractionDigits>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal_13_0">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="13"></xsd:totalDigits>
+          <xsd:fractionDigits value="0"></xsd:fractionDigits>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal_6_3">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="6"></xsd:totalDigits>
+          <xsd:fractionDigits value="3"></xsd:fractionDigits>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal_13_7">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="13"></xsd:totalDigits>
+          <xsd:fractionDigits value="7"></xsd:fractionDigits>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal_8_2">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="8"></xsd:totalDigits>
+          <xsd:fractionDigits value="2"></xsd:fractionDigits>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal_4_2">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="4"></xsd:totalDigits>
+          <xsd:fractionDigits value="2"></xsd:fractionDigits>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal_7_2">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="7"></xsd:totalDigits>
+          <xsd:fractionDigits value="2"></xsd:fractionDigits>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal_12_0">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="12"></xsd:totalDigits>
+          <xsd:fractionDigits value="0"></xsd:fractionDigits>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal_5_2">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="5"></xsd:totalDigits>
+          <xsd:fractionDigits value="2"></xsd:fractionDigits>
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:schema>
+  </types>
+  <message name="createVendorRefillOrderSoapIn">
+    <part name="inputParameters" element="tns:createVendorRefillOrder"></part>
+  </message>
+  <message name="createVendorRefillOrderSoapOut">
+    <part name="return" element="tns:createVendorRefillOrderResponse"></part>
+  </message>
+  <message name="doReceiveOrderSoapIn">
+    <part name="inputParameters" element="tns:doReceiveOrder"></part>
+  </message>
+  <message name="doReceiveOrderSoapOut">
+    <part name="return" element="tns:doReceiveOrderResponse"></part>
+  </message>
+  <message name="getOrder4ReceivingSoapIn">
+    <part name="inputParameters" element="tns:getOrder4Receiving"></part>
+  </message>
+  <message name="getOrder4ReceivingSoapOut">
+    <part name="return" element="tns:getOrder4ReceivingResponse"></part>
+  </message>
+  <portType name="TUIRFOrderServiceSoap">
+    <operation name="createVendorRefillOrder">
+      <input message="tns:createVendorRefillOrderSoapIn"></input>
+      <output message="tns:createVendorRefillOrderSoapOut"></output>
+    </operation>
+    <operation name="doReceiveOrder">
+      <input message="tns:doReceiveOrderSoapIn"></input>
+      <output message="tns:doReceiveOrderSoapOut"></output>
+    </operation>
+    <operation name="getOrder4Receiving">
+      <input message="tns:getOrder4ReceivingSoapIn"></input>
+      <output message="tns:getOrder4ReceivingSoapOut"></output>
+    </operation>
+  </portType>
+  <portType name="TUIRFOrderServiceHttpGet"></portType>
+  <portType name="TUIRFOrderServiceHttpPost"></portType>
+  <binding name="TUIRFOrderServiceSoap" type="tns:TUIRFOrderServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"></soap:binding>
+    <operation name="createVendorRefillOrder">
+      <soap:operation soapAction="urn:JadeWebServices/TWHWebServiceExt/createVendorRefillOrder" style="document"></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="doReceiveOrder">
+      <soap:operation soapAction="urn:JadeWebServices/TWHWebServiceExt/doReceiveOrder" style="document"></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="getOrder4Receiving">
+      <soap:operation soapAction="urn:JadeWebServices/TWHWebServiceExt/getOrder4Receiving" style="document"></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+  </binding>
+  <binding name="TUIRFOrderServiceHttpGet" type="tns:TUIRFOrderServiceHttpGet">
+    <http:binding verb="GET"></http:binding>
+  </binding>
+  <binding name="TUIRFOrderServiceHttpPost" type="tns:TUIRFOrderServiceHttpPost">
+    <http:binding verb="POST"></http:binding>
+  </binding>
+  <service name="TUIRFOrderService">
+    <port name="TUIRFOrderServiceSoap" binding="tns:TUIRFOrderServiceSoap">
+      <soap:address location="http://web1.twlMtui2.twl.cnw.co.nz/bin_public/jadehttp.dll?TWHWebServiceExt&amp;serviceName=TUIRFOrderService"></soap:address>
+    </port>
+    <port name="TUIRFOrderServiceHttpGet" binding="tns:TUIRFOrderServiceHttpGet">
+      <http:address location="http://web1.twlMtui2.twl.cnw.co.nz/bin_public/jadehttp.dll?TWHWebServiceExt&amp;serviceName=TUIRFOrderService"></http:address>
+    </port>
+    <port name="TUIRFOrderServiceHttpPost" binding="tns:TUIRFOrderServiceHttpPost">
+      <http:address location="http://web1.twlMtui2.twl.cnw.co.nz/bin_public/jadehttp.dll?TWHWebServiceExt&amp;serviceName=TUIRFOrderService"></http:address>
+    </port>
+  </service>
+  <message name="getProductDetailsSoapIn">
+    <part name="inputParameters" element="tns:getProductDetails"></part>
+  </message>
+  <message name="getProductDetailsSoapOut">
+    <part name="return" element="tns:getProductDetailsResponse"></part>
+  </message>
+  <message name="updateProductDetailsSoapIn">
+    <part name="inputParameters" element="tns:updateProductDetails"></part>
+  </message>
+  <message name="updateProductDetailsSoapOut">
+    <part name="return" element="tns:updateProductDetailsResponse"></part>
+  </message>
+  <portType name="TUIRFProductServiceSoap">
+    <operation name="getProductDetails">
+      <input message="tns:getProductDetailsSoapIn"></input>
+      <output message="tns:getProductDetailsSoapOut"></output>
+    </operation>
+    <operation name="updateProductDetails">
+      <input message="tns:updateProductDetailsSoapIn"></input>
+      <output message="tns:updateProductDetailsSoapOut"></output>
+    </operation>
+  </portType>
+  <portType name="TUIRFProductServiceHttpGet"></portType>
+  <portType name="TUIRFProductServiceHttpPost"></portType>
+  <binding name="TUIRFProductServiceSoap" type="tns:TUIRFProductServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"></soap:binding>
+    <operation name="getProductDetails">
+      <soap:operation soapAction="urn:JadeWebServices/TWHWebServiceExt/getProductDetails" style="document"></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="updateProductDetails">
+      <soap:operation soapAction="urn:JadeWebServices/TWHWebServiceExt/updateProductDetails" style="document"></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+  </binding>
+  <binding name="TUIRFProductServiceHttpGet" type="tns:TUIRFProductServiceHttpGet">
+    <http:binding verb="GET"></http:binding>
+  </binding>
+  <binding name="TUIRFProductServiceHttpPost" type="tns:TUIRFProductServiceHttpPost">
+    <http:binding verb="POST"></http:binding>
+  </binding>
+  <service name="TUIRFProductService">
+    <port name="TUIRFProductServiceSoap" binding="tns:TUIRFProductServiceSoap">
+      <soap:address location="http://web1.twlMtui2.twl.cnw.co.nz/bin_public/jadehttp.dll?TWHWebServiceExt&amp;serviceName=TUIRFProductService"></soap:address>
+    </port>
+    <port name="TUIRFProductServiceHttpGet" binding="tns:TUIRFProductServiceHttpGet">
+      <http:address location="http://web1.twlMtui2.twl.cnw.co.nz/bin_public/jadehttp.dll?TWHWebServiceExt&amp;serviceName=TUIRFProductService"></http:address>
+    </port>
+    <port name="TUIRFProductServiceHttpPost" binding="tns:TUIRFProductServiceHttpPost">
+      <http:address location="http://web1.twlMtui2.twl.cnw.co.nz/bin_public/jadehttp.dll?TWHWebServiceExt&amp;serviceName=TUIRFProductService"></http:address>
+    </port>
+  </service>
+  <message name="authoriseUserSoapIn">
+    <part name="inputParameters" element="tns:authoriseUser"></part>
+  </message>
+  <message name="authoriseUserSoapOut">
+    <part name="return" element="tns:authoriseUserResponse"></part>
+  </message>
+  <portType name="TUIRFSecurityServiceSoap">
+    <operation name="authoriseUser">
+      <input message="tns:authoriseUserSoapIn"></input>
+      <output message="tns:authoriseUserSoapOut"></output>
+    </operation>
+  </portType>
+  <portType name="TUIRFSecurityServiceHttpGet"></portType>
+  <portType name="TUIRFSecurityServiceHttpPost"></portType>
+  <binding name="TUIRFSecurityServiceSoap" type="tns:TUIRFSecurityServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"></soap:binding>
+    <operation name="authoriseUser">
+      <soap:operation soapAction="urn:JadeWebServices/TWHWebServiceExt/authoriseUser" style="document"></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+  </binding>
+  <binding name="TUIRFSecurityServiceHttpGet" type="tns:TUIRFSecurityServiceHttpGet">
+    <http:binding verb="GET"></http:binding>
+  </binding>
+  <binding name="TUIRFSecurityServiceHttpPost" type="tns:TUIRFSecurityServiceHttpPost">
+    <http:binding verb="POST"></http:binding>
+  </binding>
+  <service name="TUIRFSecurityService">
+    <port name="TUIRFSecurityServiceSoap" binding="tns:TUIRFSecurityServiceSoap">
+      <soap:address location="http://web1.twlMtui2.twl.cnw.co.nz/bin_public/jadehttp.dll?TWHWebServiceExt&amp;serviceName=TUIRFSecurityService"></soap:address>
+    </port>
+    <port name="TUIRFSecurityServiceHttpGet" binding="tns:TUIRFSecurityServiceHttpGet">
+      <http:address location="http://web1.twlMtui2.twl.cnw.co.nz/bin_public/jadehttp.dll?TWHWebServiceExt&amp;serviceName=TUIRFSecurityService"></http:address>
+    </port>
+    <port name="TUIRFSecurityServiceHttpPost" binding="tns:TUIRFSecurityServiceHttpPost">
+      <http:address location="http://web1.twlMtui2.twl.cnw.co.nz/bin_public/jadehttp.dll?TWHWebServiceExt&amp;serviceName=TUIRFSecurityService"></http:address>
+    </port>
+  </service>
+  <message name="doStockAdjustmentSoapIn">
+    <part name="inputParameters" element="tns:doStockAdjustment"></part>
+  </message>
+  <message name="doStockAdjustmentSoapOut">
+    <part name="return" element="tns:doStockAdjustmentResponse"></part>
+  </message>
+  <message name="doStockReturnXferSoapIn">
+    <part name="inputParameters" element="tns:doStockReturnXfer"></part>
+  </message>
+  <message name="doStockReturnXferSoapOut">
+    <part name="return" element="tns:doStockReturnXferResponse"></part>
+  </message>
+  <message name="doUnloadPalletSoapIn">
+    <part name="inputParameters" element="tns:doUnloadPallet"></part>
+  </message>
+  <message name="doUnloadPalletSoapOut">
+    <part name="return" element="tns:doUnloadPalletResponse"></part>
+  </message>
+  <message name="getRTSInformationSoapIn">
+    <part name="inputParameters" element="tns:getRTSInformation"></part>
+  </message>
+  <message name="getRTSInformationSoapOut">
+    <part name="return" element="tns:getRTSInformationResponse"></part>
+  </message>
+  <message name="getReturnsInformationSoapIn">
+    <part name="inputParameters" element="tns:getReturnsInformation"></part>
+  </message>
+  <message name="getReturnsInformationSoapOut">
+    <part name="return" element="tns:getReturnsInformationResponse"></part>
+  </message>
+  <message name="getScanUnloadNumberSoapIn">
+    <part name="inputParameters" element="tns:getScanUnloadNumber"></part>
+  </message>
+  <message name="getScanUnloadNumberSoapOut">
+    <part name="return" element="tns:getScanUnloadNumberResponse"></part>
+  </message>
+  <message name="getStockOrderInformationSoapIn">
+    <part name="inputParameters" element="tns:getStockOrderInformation"></part>
+  </message>
+  <message name="getStockOrderInformationSoapOut">
+    <part name="return" element="tns:getStockOrderInformationResponse"></part>
+  </message>
+  <message name="getStockInformationSoapIn">
+    <part name="inputParameters" element="tns:getStockInformation"></part>
+  </message>
+  <message name="getStockInformationSoapOut">
+    <part name="return" element="tns:getStockInformationResponse"></part>
+  </message>
+  <portType name="TUIRFStockServiceSoap">
+    <operation name="doStockAdjustment">
+      <input message="tns:doStockAdjustmentSoapIn"></input>
+      <output message="tns:doStockAdjustmentSoapOut"></output>
+    </operation>
+    <operation name="doStockReturnXfer">
+      <input message="tns:doStockReturnXferSoapIn"></input>
+      <output message="tns:doStockReturnXferSoapOut"></output>
+    </operation>
+    <operation name="doUnloadPallet">
+      <input message="tns:doUnloadPalletSoapIn"></input>
+      <output message="tns:doUnloadPalletSoapOut"></output>
+    </operation>
+    <operation name="getRTSInformation">
+      <input message="tns:getRTSInformationSoapIn"></input>
+      <output message="tns:getRTSInformationSoapOut"></output>
+    </operation>
+    <operation name="getReturnsInformation">
+      <input message="tns:getReturnsInformationSoapIn"></input>
+      <output message="tns:getReturnsInformationSoapOut"></output>
+    </operation>
+    <operation name="getScanUnloadNumber">
+      <input message="tns:getScanUnloadNumberSoapIn"></input>
+      <output message="tns:getScanUnloadNumberSoapOut"></output>
+    </operation>
+    <operation name="getStockOrderInformation">
+      <input message="tns:getStockOrderInformationSoapIn"></input>
+      <output message="tns:getStockOrderInformationSoapOut"></output>
+    </operation>
+    <operation name="getStockInformation">
+      <input message="tns:getStockInformationSoapIn"></input>
+      <output message="tns:getStockInformationSoapOut"></output>
+    </operation>
+  </portType>
+  <portType name="TUIRFStockServiceHttpGet"></portType>
+  <portType name="TUIRFStockServiceHttpPost"></portType>
+  <binding name="TUIRFStockServiceSoap" type="tns:TUIRFStockServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"></soap:binding>
+    <operation name="doStockAdjustment">
+      <soap:operation soapAction="urn:JadeWebServices/TWHWebServiceExt/doStockAdjustment" style="document"></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="doStockReturnXfer">
+      <soap:operation soapAction="urn:JadeWebServices/TWHWebServiceExt/doStockReturnXfer" style="document"></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="doUnloadPallet">
+      <soap:operation soapAction="urn:JadeWebServices/TWHWebServiceExt/doUnloadPallet" style="document"></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="getRTSInformation">
+      <soap:operation soapAction="urn:JadeWebServices/TWHWebServiceExt/getRTSInformation" style="document"></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="getReturnsInformation">
+      <soap:operation soapAction="urn:JadeWebServices/TWHWebServiceExt/getReturnsInformation" style="document"></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="getScanUnloadNumber">
+      <soap:operation soapAction="urn:JadeWebServices/TWHWebServiceExt/getScanUnloadNumber" style="document"></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="getStockOrderInformation">
+      <soap:operation soapAction="urn:JadeWebServices/TWHWebServiceExt/getStockOrderInformation" style="document"></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="getStockInformation">
+      <soap:operation soapAction="urn:JadeWebServices/TWHWebServiceExt/getStockInformation" style="document"></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+  </binding>
+  <binding name="TUIRFStockServiceHttpGet" type="tns:TUIRFStockServiceHttpGet">
+    <http:binding verb="GET"></http:binding>
+  </binding>
+  <binding name="TUIRFStockServiceHttpPost" type="tns:TUIRFStockServiceHttpPost">
+    <http:binding verb="POST"></http:binding>
+  </binding>
+  <service name="TUIRFStockService">
+    <port name="TUIRFStockServiceSoap" binding="tns:TUIRFStockServiceSoap">
+      <soap:address location="http://web1.twlMtui2.twl.cnw.co.nz/bin_public/jadehttp.dll?TWHWebServiceExt&amp;serviceName=TUIRFStockService"></soap:address>
+    </port>
+    <port name="TUIRFStockServiceHttpGet" binding="tns:TUIRFStockServiceHttpGet">
+      <http:address location="http://web1.twlMtui2.twl.cnw.co.nz/bin_public/jadehttp.dll?TWHWebServiceExt&amp;serviceName=TUIRFStockService"></http:address>
+    </port>
+    <port name="TUIRFStockServiceHttpPost" binding="tns:TUIRFStockServiceHttpPost">
+      <http:address location="http://web1.twlMtui2.twl.cnw.co.nz/bin_public/jadehttp.dll?TWHWebServiceExt&amp;serviceName=TUIRFStockService"></http:address>
+    </port>
+  </service>
+  <message name="getSupplierDetailsSoapIn">
+    <part name="inputParameters" element="tns:getSupplierDetails"></part>
+  </message>
+  <message name="getSupplierDetailsSoapOut">
+    <part name="return" element="tns:getSupplierDetailsResponse"></part>
+  </message>
+  <portType name="TUIRFSupplierServiceSoap">
+    <operation name="getSupplierDetails">
+      <input message="tns:getSupplierDetailsSoapIn"></input>
+      <output message="tns:getSupplierDetailsSoapOut"></output>
+    </operation>
+  </portType>
+  <portType name="TUIRFSupplierServiceHttpGet"></portType>
+  <portType name="TUIRFSupplierServiceHttpPost"></portType>
+  <binding name="TUIRFSupplierServiceSoap" type="tns:TUIRFSupplierServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"></soap:binding>
+    <operation name="getSupplierDetails">
+      <soap:operation soapAction="urn:JadeWebServices/TWHWebServiceExt/getSupplierDetails" style="document"></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+  </binding>
+  <binding name="TUIRFSupplierServiceHttpGet" type="tns:TUIRFSupplierServiceHttpGet">
+    <http:binding verb="GET"></http:binding>
+  </binding>
+  <binding name="TUIRFSupplierServiceHttpPost" type="tns:TUIRFSupplierServiceHttpPost">
+    <http:binding verb="POST"></http:binding>
+  </binding>
+  <service name="TUIRFSupplierService">
+    <port name="TUIRFSupplierServiceSoap" binding="tns:TUIRFSupplierServiceSoap">
+      <soap:address location="http://web1.twlMtui2.twl.cnw.co.nz/bin_public/jadehttp.dll?TWHWebServiceExt&amp;serviceName=TUIRFSupplierService"></soap:address>
+    </port>
+    <port name="TUIRFSupplierServiceHttpGet" binding="tns:TUIRFSupplierServiceHttpGet">
+      <http:address location="http://web1.twlMtui2.twl.cnw.co.nz/bin_public/jadehttp.dll?TWHWebServiceExt&amp;serviceName=TUIRFSupplierService"></http:address>
+    </port>
+    <port name="TUIRFSupplierServiceHttpPost" binding="tns:TUIRFSupplierServiceHttpPost">
+      <http:address location="http://web1.twlMtui2.twl.cnw.co.nz/bin_public/jadehttp.dll?TWHWebServiceExt&amp;serviceName=TUIRFSupplierService"></http:address>
+    </port>
+  </service>
+  <message name="processRFCSoapIn">
+    <part name="inputParameters" element="tns:processRFC"></part>
+  </message>
+  <message name="processRFCSoapOut">
+    <part name="return" element="tns:processRFCResponse"></part>
+  </message>
+  <portType name="TUISupplierServiceSoap">
+    <operation name="processRFC">
+      <input message="tns:processRFCSoapIn"></input>
+      <output message="tns:processRFCSoapOut"></output>
+    </operation>
+  </portType>
+  <portType name="TUISupplierServiceHttpGet"></portType>
+  <portType name="TUISupplierServiceHttpPost"></portType>
+  <binding name="TUISupplierServiceSoap" type="tns:TUISupplierServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"></soap:binding>
+    <operation name="processRFC">
+      <soap:operation soapAction="urn:JadeWebServices/TWHWebServiceExt/processRFC" style="document"></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+  </binding>
+  <binding name="TUISupplierServiceHttpGet" type="tns:TUISupplierServiceHttpGet">
+    <http:binding verb="GET"></http:binding>
+  </binding>
+  <binding name="TUISupplierServiceHttpPost" type="tns:TUISupplierServiceHttpPost">
+    <http:binding verb="POST"></http:binding>
+  </binding>
+  <service name="TUISupplierService">
+    <port name="TUISupplierServiceSoap" binding="tns:TUISupplierServiceSoap">
+      <soap:address location="http://web1.twlMtui2.twl.cnw.co.nz/bin_public/jadehttp.dll?TWHWebServiceExt&amp;serviceName=TUISupplierService"></soap:address>
+    </port>
+    <port name="TUISupplierServiceHttpGet" binding="tns:TUISupplierServiceHttpGet">
+      <http:address location="http://web1.twlMtui2.twl.cnw.co.nz/bin_public/jadehttp.dll?TWHWebServiceExt&amp;serviceName=TUISupplierService"></http:address>
+    </port>
+    <port name="TUISupplierServiceHttpPost" binding="tns:TUISupplierServiceHttpPost">
+      <http:address location="http://web1.twlMtui2.twl.cnw.co.nz/bin_public/jadehttp.dll?TWHWebServiceExt&amp;serviceName=TUISupplierService"></http:address>
+    </port>
+  </service>
+  <message name="processBulkSOHRequestSoapIn">
+    <part name="inputParameters" element="tns:processBulkSOHRequest"></part>
+  </message>
+  <message name="processBulkSOHRequestSoapOut">
+    <part name="return" element="tns:processBulkSOHRequestResponse"></part>
+  </message>
+  <message name="processBulkSOHRequestHttpGetIn">
+    <part name="branch" type="xsd:int"></part>
+    <part name="classCode" type="xsd:string"></part>
+    <part name="returnData" type="xsd:int"></part>
+  </message>
+  <message name="processBulkSOHRequestHttpGetOut">
+    <part name="Body" type="xsd:string"></part>
+  </message>
+  <message name="processBulkSOHRequestHttpPostIn">
+    <part name="branch" type="xsd:int"></part>
+    <part name="classCode" type="xsd:string"></part>
+    <part name="returnData" type="xsd:int"></part>
+  </message>
+  <message name="processBulkSOHRequestHttpPostOut">
+    <part name="Body" type="xsd:string"></part>
+  </message>
+  <message name="processSetStockAdjustmentsSoapIn">
+    <part name="inputParameters" element="tns:processSetStockAdjustments"></part>
+  </message>
+  <message name="processSetStockAdjustmentsSoapOut">
+    <part name="return" element="tns:processSetStockAdjustmentsResponse"></part>
+  </message>
+  <portType name="TUIWebServiceProviderSoap">
+    <operation name="processBulkSOHRequest">
+      <input message="tns:processBulkSOHRequestSoapIn"></input>
+      <output message="tns:processBulkSOHRequestSoapOut"></output>
+    </operation>
+    <operation name="processSetStockAdjustments">
+      <input message="tns:processSetStockAdjustmentsSoapIn"></input>
+      <output message="tns:processSetStockAdjustmentsSoapOut"></output>
+    </operation>
+  </portType>
+  <portType name="TUIWebServiceProviderHttpGet">
+    <operation name="processBulkSOHRequest">
+      <input message="tns:processBulkSOHRequestHttpGetIn"></input>
+      <output message="tns:processBulkSOHRequestHttpGetOut"></output>
+    </operation>
+  </portType>
+  <portType name="TUIWebServiceProviderHttpPost">
+    <operation name="processBulkSOHRequest">
+      <input message="tns:processBulkSOHRequestHttpPostIn"></input>
+      <output message="tns:processBulkSOHRequestHttpPostOut"></output>
+    </operation>
+  </portType>
+  <binding name="TUIWebServiceProviderSoap" type="tns:TUIWebServiceProviderSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"></soap:binding>
+    <operation name="processBulkSOHRequest">
+      <soap:operation soapAction="urn:JadeWebServices/TWHWebServiceExt/processBulkSOHRequest" style="document"></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+    <operation name="processSetStockAdjustments">
+      <soap:operation soapAction="urn:JadeWebServices/TWHWebServiceExt/processSetStockAdjustments" style="document"></soap:operation>
+      <input>
+        <soap:body use="literal"></soap:body>
+      </input>
+      <output>
+        <soap:body use="literal"></soap:body>
+      </output>
+    </operation>
+  </binding>
+  <binding name="TUIWebServiceProviderHttpGet" type="tns:TUIWebServiceProviderHttpGet">
+    <http:binding verb="GET"></http:binding>
+    <operation name="processBulkSOHRequest">
+      <http:operation location="/processBulkSOHRequest"></http:operation>
+      <input>
+        <http:urlEncoded></http:urlEncoded>
+      </input>
+      <output>
+        <mime:mimeXml part="Body"></mime:mimeXml>
+      </output>
+    </operation>
+  </binding>
+  <binding name="TUIWebServiceProviderHttpPost" type="tns:TUIWebServiceProviderHttpPost">
+    <http:binding verb="POST"></http:binding>
+    <operation name="processBulkSOHRequest">
+      <http:operation location="/processBulkSOHRequest"></http:operation>
+      <input>
+        <mime:content type="application/x-www-form-urlencoded"></mime:content>
+      </input>
+      <output>
+        <mime:mimeXml part="Body"></mime:mimeXml>
+      </output>
+    </operation>
+  </binding>
+  <service name="TUIWebServiceProvider">
+    <port name="TUIWebServiceProviderSoap" binding="tns:TUIWebServiceProviderSoap">
+      <soap:address location="http://web1.twlMtui2.twl.cnw.co.nz/bin_public/jadehttp.dll?TWHWebServiceExt&amp;serviceName=TUIWebServiceProvider"></soap:address>
+    </port>
+    <port name="TUIWebServiceProviderHttpGet" binding="tns:TUIWebServiceProviderHttpGet">
+      <http:address location="http://web1.twlMtui2.twl.cnw.co.nz/bin_public/jadehttp.dll?TWHWebServiceExt&amp;serviceName=TUIWebServiceProvider"></http:address>
+    </port>
+    <port name="TUIWebServiceProviderHttpPost" binding="tns:TUIWebServiceProviderHttpPost">
+      <http:address location="http://web1.twlMtui2.twl.cnw.co.nz/bin_public/jadehttp.dll?TWHWebServiceExt&amp;serviceName=TUIWebServiceProvider"></http:address>
+    </port>
+  </service>
+</definitions>
+
